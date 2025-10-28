@@ -1,0 +1,362 @@
+<http://example.org/fgv#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/fgv#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/fgv/0.1.0> .
+<http://example.org/fgv#> <http://purl.org/dc/terms/abstract> "A vocabulary to describe Guidance."@en .
+<http://example.org/fgv#> <http://purl.org/dc/terms/created> "2025-10-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/fgv#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0255-5101> .
+<http://example.org/fgv#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-1106-8441> .
+<http://example.org/fgv#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://example.org/fgv#> <http://purl.org/dc/terms/modified> "2025-10-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/fgv#> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology capturing core concepts and relations from the FAIR Guidance diagram."@en .
+<http://example.org/fgv#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fgv#describes
+<http://example.org/fgv#describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fgv#describes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#WebPage> .
+<http://example.org/fgv#describes> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fgv#ObjectOrServiceAPI> .
+<http://example.org/fgv#describes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a web page to the API or object it describes."@en .
+<http://example.org/fgv#describes> <http://www.w3.org/2000/01/rdf-schema#label> "describes"@en .
+# 
+# http://example.org/fgv#hasFocusArea
+<http://example.org/fgv#hasFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fgv#hasFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://example.org/fgv#hasFocusArea> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#hasFocusArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fgv#FocusArea> .
+<http://example.org/fgv#hasFocusArea> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a guidance element to one of its focus areas (What, How, or Why)."@en .
+<http://example.org/fgv#hasFocusArea> <http://www.w3.org/2000/01/rdf-schema#label> "has focus area"@en .
+# 
+# http://example.org/fgv#relatesToFAIRPrinciple
+<http://example.org/fgv#relatesToFAIRPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fgv#relatesToFAIRPrinciple> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#relatesToFAIRPrinciple> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple> .
+<https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#relatesToFAIRPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a guidance element to zero or more FAIR Principles (or Sub-Principles) as defined in the FAIR Vocabulary."@en .
+<http://example.org/fgv#relatesToFAIRPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "relates to FAIR Principle"@en .
+# 
+# http://example.org/fgv#resolvesTo
+<http://example.org/fgv#resolvesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fgv#resolvesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://example.org/fgv#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#PersistentIdentifier> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#Annotation> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#ObjectOrServiceAPI> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#ExternalResource> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the resource a persistent identifier or annotation resolves to (e.g., a web page, annotation, or API)."@en .
+<http://example.org/fgv#resolvesTo> <http://www.w3.org/2000/01/rdf-schema#label> "resolves to"@en .
+# 
+# http://example.org/fgv#supports
+<http://example.org/fgv#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/fgv#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#supports> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion)."@en .
+<http://example.org/fgv#supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en .
+# 
+# http://semanticscience.org/resource/SIO_000341
+<http://semanticscience.org/resource/SIO_000341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://semanticscience.org/resource/SIO_000341> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://semanticscience.org/resource/SIO_000341> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#ExternalResource> .
+<http://semanticscience.org/resource/SIO_000341> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/fgv#ExternalResource> .
+<http://semanticscience.org/resource/SIO_000341> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an abstract reference to its single manifestation (e.g., PID, WebPage, or Annotation)."@en .
+<http://semanticscience.org/resource/SIO_000341> <http://www.w3.org/2000/01/rdf-schema#label> "is manifested as"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#GuidanceElement> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description providing details about the guidance element."@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#GuidanceElement> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique IRI or other persistent identifier associated with the guidance element."@en .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "IRI / identifier"@en .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/fgv#GuidanceElement> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable title of the guidance element."@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fgv#Annotation
+<http://example.org/fgv#Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#ExternalResource> .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_001166> .
+<http://semanticscience.org/resource/SIO_001166> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://example.org/fgv#WebPage> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/fgv#resolvesTo> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2002/07/owl#disjointWith> <http://example.org/fgv#PersistentIdentifier> .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2002/07/owl#disjointWith> <http://example.org/fgv#WebPage> .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured note or comment associated with another resource."@en .
+<http://example.org/fgv#Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation"@en .
+# 
+# http://example.org/fgv#Benchmark
+<http://example.org/fgv#Benchmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Benchmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#Benchmark> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes."@en .
+<http://example.org/fgv#Benchmark> <http://www.w3.org/2000/01/rdf-schema#label> "Benchmark"@en .
+<http://example.org/fgv#Benchmark> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/DefinedTerm> .
+# 
+# http://example.org/fgv#BestPractice
+<http://example.org/fgv#BestPractice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#BestPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#BestPractice> <http://www.w3.org/2000/01/rdf-schema#comment> "Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes."@en .
+<http://example.org/fgv#BestPractice> <http://www.w3.org/2000/01/rdf-schema#label> "Best Practice"@en .
+<http://example.org/fgv#BestPractice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/BestPractice> .
+# 
+# http://example.org/fgv#ExternalResource
+<http://example.org/fgv#ExternalResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#ExternalResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000614> .
+<http://semanticscience.org/resource/SIO_000614> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#ExternalResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#WebPage> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#PersistentIdentifier> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#Annotation> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://semanticscience.org/resource/SIO_000341> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/fgv#ExternalResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource that represents or provides access to a piece of guidance. May be a Persistent Identifier, a Web Page, or an Annotation."@en .
+<http://example.org/fgv#ExternalResource> <http://www.w3.org/2000/01/rdf-schema#label> "Reference / External Resource"@en .
+# 
+# http://example.org/fgv#FAQ
+<http://example.org/fgv#FAQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#FAQ> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#FAQ> <http://www.w3.org/2000/01/rdf-schema#comment> "A curated list of common queries and clear, concise answers about a product, service, policy, or process."@en .
+<http://example.org/fgv#FAQ> <http://www.w3.org/2000/01/rdf-schema#label> "Frequently Asked Questions"@en .
+<http://example.org/fgv#FAQ> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/FAQPage> .
+# 
+# http://example.org/fgv#FocusArea
+<http://example.org/fgv#FocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#FocusArea> <http://www.w3.org/2000/01/rdf-schema#comment> "A conceptual aspect or interpretive dimension describing the emphasis of a guidance element — typically answering 'What?', 'How?', or 'Why?'."@en .
+<http://example.org/fgv#FocusArea> <http://www.w3.org/2000/01/rdf-schema#label> "Focus Area"@en .
+# 
+# http://example.org/fgv#Framework
+<http://example.org/fgv#Framework> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Framework> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#Framework> <http://www.w3.org/2000/01/rdf-schema#comment> "A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice."@en .
+<http://example.org/fgv#Framework> <http://www.w3.org/2000/01/rdf-schema#label> "Framework"@en .
+<http://example.org/fgv#Framework> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/Standard> .
+<http://example.org/fgv#Framework> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/Intangible> .
+# 
+# http://example.org/fgv#GuidanceElement
+<http://example.org/fgv#GuidanceElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#GuidanceElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/CreativeWork> .
+<https://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#GuidanceElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc."@en .
+<http://example.org/fgv#GuidanceElement> <http://www.w3.org/2000/01/rdf-schema#label> "Guidance Element"@en .
+<http://example.org/fgv#GuidanceElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/CreativeWork> .
+# 
+# http://example.org/fgv#ObjectOrServiceAPI
+<http://example.org/fgv#ObjectOrServiceAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#ObjectOrServiceAPI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_001190> .
+<http://semanticscience.org/resource/SIO_001190> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#ObjectOrServiceAPI> <http://www.w3.org/2000/01/rdf-schema#comment> "A data service or API providing machine-actionable access to guidance or data."@en .
+<http://example.org/fgv#ObjectOrServiceAPI> <http://www.w3.org/2000/01/rdf-schema#label> "Object or Service / API"@en .
+# 
+# http://example.org/fgv#PersistentIdentifier
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#ExternalResource> .
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000675> .
+<http://semanticscience.org/resource/SIO_000675> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#WebPage> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#ObjectOrServiceAPI> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/fgv#Annotation> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/fgv#resolvesTo> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <http://example.org/fgv#WebPage> .
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that uniquely and persistently identifies a resource."@en .
+<http://example.org/fgv#PersistentIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Persistent Identifier"@en .
+# 
+# http://example.org/fgv#Procedure
+<http://example.org/fgv#Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#Procedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process."@en .
+<http://example.org/fgv#Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@en .
+<http://example.org/fgv#Procedure> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/HowTo> .
+# 
+# http://example.org/fgv#Standard
+<http://example.org/fgv#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#GuidanceElement> .
+<http://example.org/fgv#Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Standard> .
+<http://purl.org/dc/terms/Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "Documented agreements containing technical specifications or criteria to ensure consistent quality, safety, or interoperability."@en .
+<http://example.org/fgv#Standard> <http://www.w3.org/2000/01/rdf-schema#label> "Standard"@en .
+<http://example.org/fgv#Standard> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/TechArticle> .
+# 
+# http://example.org/fgv#WebPage
+<http://example.org/fgv#WebPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#WebPage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org/fgv#ExternalResource> .
+<http://example.org/fgv#WebPage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000302> .
+<http://semanticscience.org/resource/SIO_000302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/fgv#WebPage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/fgv#ObjectOrServiceAPI> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/fgv#describes> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://example.org/fgv#WebPage> <http://www.w3.org/2000/01/rdf-schema#comment> "A document or page accessible on the Web."@en .
+<http://example.org/fgv#WebPage> <http://www.w3.org/2000/01/rdf-schema#label> "Web Page"@en .
+# 
+# http://purl.org/dc/terms/LicenseDocument
+<http://purl.org/dc/terms/LicenseDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/dc/terms/Standard
+# 
+# http://semanticscience.org/resource/SIO_000302
+# 
+# http://semanticscience.org/resource/SIO_000614
+# 
+# http://semanticscience.org/resource/SIO_000675
+# 
+# http://semanticscience.org/resource/SIO_001166
+# 
+# http://semanticscience.org/resource/SIO_001190
+# 
+# http://www.w3.org/2000/01/rdf-schema#Resource
+# 
+# https://schema.org/CreativeWork
+# 
+# https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/fgv#
+<http://example.org/fgv#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fgv#> <http://purl.org/dc/terms/title> "FAIR Guidance Vocabulary (FGV) — Core Ontology"@en .
+# 
+# http://example.org/fgv#HowFocus
+<http://example.org/fgv#HowFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fgv#HowFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fgv#FocusArea> .
+<http://example.org/fgv#HowFocus> <http://www.w3.org/2000/01/rdf-schema#comment> "Focuses on how the guidance should be operationalized — answering 'How should this be done?'"@en .
+<http://example.org/fgv#HowFocus> <http://www.w3.org/2000/01/rdf-schema#label> "Process (How)"@en .
+# 
+# http://example.org/fgv#MoreFocus
+<http://example.org/fgv#MoreFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fgv#MoreFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fgv#FocusArea> .
+<http://example.org/fgv#MoreFocus> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides additional useful information about the topic, such as context, examples, tools, or references — answering 'What else is relevant or helpful to know?'"@en .
+<http://example.org/fgv#MoreFocus> <http://www.w3.org/2000/01/rdf-schema#label> "More: Additional Information"@en .
+# 
+# http://example.org/fgv#WhatFocus
+<http://example.org/fgv#WhatFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fgv#WhatFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fgv#FocusArea> .
+<http://example.org/fgv#WhatFocus> <http://www.w3.org/2000/01/rdf-schema#comment> "Focuses on what the guidance means and how it can be implemented — answering 'What does this mean?'"@en .
+<http://example.org/fgv#WhatFocus> <http://www.w3.org/2000/01/rdf-schema#label> "Meaning / Implementation (What)"@en .
+# 
+# http://example.org/fgv#WhyFocus
+<http://example.org/fgv#WhyFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/fgv#WhyFocus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/fgv#FocusArea> .
+<http://example.org/fgv#WhyFocus> <http://www.w3.org/2000/01/rdf-schema#comment> "Focuses on why the guidance is important and its underlying motivation — answering 'Why follow this guideline?'"@en .
+<http://example.org/fgv#WhyFocus> <http://www.w3.org/2000/01/rdf-schema#label> "Motivation (Why)"@en .
+# 
+# https://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/LicenseDocument> .
+<https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/2000/01/rdf-schema#comment> "A permissive open license allowing reuse and distribution with attribution."@en .
+<https://creativecommons.org/licenses/by/4.0/> <http://www.w3.org/2000/01/rdf-schema#label> "Creative Commons Attribution 4.0 International"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
