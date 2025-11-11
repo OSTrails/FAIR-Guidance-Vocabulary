@@ -1,22 +1,23 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://example.org/fgv#"
-     xml:base="http://example.org/fgv"
+<rdf:RDF xmlns="https://w3id.org/fgv#"
+     xml:base="https://w3id.org/fgv"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://example.org/fgv#">
-        <owl:versionIRI rdf:resource="https://w3id.org/fgv/0.1.0"/>
+    <owl:Ontology rdf:about="https://w3id.org/fgv#">
+        <owl:versionIRI rdf:resource="https://w3id.org/fgv/0.1.1"/>
         <terms:abstract xml:lang="en">A vocabulary to describe Guidance.</terms:abstract>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-10-13</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-0255-5101"/>
+        <terms:creator rdf:resource="https://orcid.org/0000-0002-7874-0362"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-1106-8441"/>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-10-13</terms:modified>
         <rdfs:comment xml:lang="en">An ontology capturing core concepts and relations from the FAIR Guidance diagram.</rdfs:comment>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -99,36 +100,62 @@
     
 
 
-    <!-- http://example.org/fgv#describes -->
+    <!-- http://semanticscience.org/resource/SIO_000341 -->
 
 
-    <owl:ObjectProperty rdf:about="http://example.org/fgv#describes">
-        <rdfs:domain rdf:resource="http://example.org/fgv#WebPage"/>
-        <rdfs:range rdf:resource="http://example.org/fgv#ObjectOrServiceAPI"/>
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000341">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#ExternalResource"/>
+        <rdfs:range rdf:resource="https://w3id.org/fgv#ExternalResource"/>
+        <rdfs:comment xml:lang="en">Relates an abstract reference to its single manifestation (e.g., PID, WebPage, or Annotation).</rdfs:comment>
+        <rdfs:label xml:lang="en">is manifested as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fgv#describes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fgv#describes">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#WebPage"/>
+        <rdfs:range rdf:resource="https://w3id.org/fgv#ObjectOrServiceAPI"/>
         <rdfs:comment xml:lang="en">Relates a web page to the API or object it describes.</rdfs:comment>
         <rdfs:label xml:lang="en">describes</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://example.org/fgv#hasFocusArea -->
+    <!-- https://w3id.org/fgv#domain -->
 
 
-    <owl:ObjectProperty rdf:about="http://example.org/fgv#hasFocusArea">
+    <owl:ObjectProperty rdf:about="https://w3id.org/fgv#domain">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:range rdf:resource="http://example.org/fgv#FocusArea"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Field of science and technology classification (FOS) for this guidance element.</rdfs:comment>
+        <rdfs:label xml:lang="en">domain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/fgv#hasFocusArea -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/fgv#hasFocusArea">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/fgv#FocusArea"/>
         <rdfs:comment xml:lang="en">Relates a guidance element to one of its focus areas (What, How, or Why).</rdfs:comment>
         <rdfs:label xml:lang="en">has focus area</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://example.org/fgv#relatesToFAIRPrinciple -->
+    <!-- https://w3id.org/fgv#relatesToFAIRPrinciple -->
 
 
-    <owl:ObjectProperty rdf:about="http://example.org/fgv#relatesToFAIRPrinciple">
-        <rdfs:domain rdf:resource="http://example.org/fgv#GuidanceElement"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/fgv#relatesToFAIRPrinciple">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
         <rdfs:range rdf:resource="https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple"/>
         <rdfs:comment xml:lang="en">Links a guidance element to zero or more FAIR Principles (or Sub-Principles) as defined in the FAIR Vocabulary.</rdfs:comment>
         <rdfs:label xml:lang="en">relates to FAIR Principle</rdfs:label>
@@ -136,24 +163,24 @@
     
 
 
-    <!-- http://example.org/fgv#resolvesTo -->
+    <!-- https://w3id.org/fgv#resolvesTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://example.org/fgv#resolvesTo">
+    <owl:ObjectProperty rdf:about="https://w3id.org/fgv#resolvesTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://example.org/fgv#Annotation"/>
-                    <rdf:Description rdf:about="http://example.org/fgv#PersistentIdentifier"/>
+                    <rdf:Description rdf:about="https://w3id.org/fgv#Annotation"/>
+                    <rdf:Description rdf:about="https://w3id.org/fgv#PersistentIdentifier"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://example.org/fgv#ExternalResource"/>
-                    <rdf:Description rdf:about="http://example.org/fgv#ObjectOrServiceAPI"/>
+                    <rdf:Description rdf:about="https://w3id.org/fgv#ExternalResource"/>
+                    <rdf:Description rdf:about="https://w3id.org/fgv#ObjectOrServiceAPI"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -163,27 +190,14 @@
     
 
 
-    <!-- http://example.org/fgv#supports -->
+    <!-- https://w3id.org/fgv#supports -->
 
 
-    <owl:ObjectProperty rdf:about="http://example.org/fgv#supports">
-        <rdfs:domain rdf:resource="http://example.org/fgv#GuidanceElement"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/fgv#supports">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <rdfs:comment xml:lang="en">Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion).</rdfs:comment>
         <rdfs:label xml:lang="en">supports</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://semanticscience.org/resource/SIO_000341 -->
-
-
-    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000341">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://example.org/fgv#ExternalResource"/>
-        <rdfs:range rdf:resource="http://example.org/fgv#ExternalResource"/>
-        <rdfs:comment xml:lang="en">Relates an abstract reference to its single manifestation (e.g., PID, WebPage, or Annotation).</rdfs:comment>
-        <rdfs:label xml:lang="en">is manifested as</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -204,7 +218,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:domain rdf:resource="http://example.org/fgv#GuidanceElement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A textual description providing details about the guidance element.</rdfs:comment>
         <rdfs:label xml:lang="en">description</rdfs:label>
@@ -216,7 +230,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:domain rdf:resource="http://example.org/fgv#GuidanceElement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment xml:lang="en">A globally unique IRI or other persistent identifier associated with the guidance element.</rdfs:comment>
         <rdfs:label xml:lang="en">IRI / identifier</rdfs:label>
@@ -228,10 +242,58 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:domain rdf:resource="http://example.org/fgv#GuidanceElement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">A human-readable title of the guidance element.</rdfs:comment>
         <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/creator -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/creator">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A human-readable person or institution who created the guidance element.</rdfs:comment>
+        <rdfs:label xml:lang="en">creator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/dateCreated -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/dateCreated">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A date when the guidance element was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/dateModified -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/dateModified">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A date on which the guidance element was modified.</rdfs:comment>
+        <rdfs:label xml:lang="en">modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/maintainer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/maintainer">
+        <rdfs:domain rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A human-readable person or institution who maintains the guidance element.</rdfs:comment>
+        <rdfs:label xml:lang="en">maintainer</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -245,206 +307,6 @@
      -->
 
 
-    
-
-
-    <!-- http://example.org/fgv#Annotation -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#Annotation">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#ExternalResource"/>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001166"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.org/fgv#resolvesTo"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://example.org/fgv#WebPage"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://example.org/fgv#PersistentIdentifier"/>
-        <owl:disjointWith rdf:resource="http://example.org/fgv#WebPage"/>
-        <rdfs:comment xml:lang="en">A structured note or comment associated with another resource.</rdfs:comment>
-        <rdfs:label xml:lang="en">Annotation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#Benchmark -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#Benchmark">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:comment xml:lang="en">Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes.</rdfs:comment>
-        <rdfs:label xml:lang="en">Benchmark</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://schema.org/DefinedTerm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#BestPractice -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#BestPractice">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:comment xml:lang="en">Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes.</rdfs:comment>
-        <rdfs:label xml:lang="en">Best Practice</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://schema.org/BestPractice"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#ExternalResource -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#ExternalResource">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000614"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000341"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://example.org/fgv#Annotation"/>
-                            <rdf:Description rdf:about="http://example.org/fgv#PersistentIdentifier"/>
-                            <rdf:Description rdf:about="http://example.org/fgv#WebPage"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A resource that represents or provides access to a piece of guidance. May be a Persistent Identifier, a Web Page, or an Annotation.</rdfs:comment>
-        <rdfs:label xml:lang="en">Reference / External Resource</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#FAQ -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#FAQ">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:comment xml:lang="en">A curated list of common queries and clear, concise answers about a product, service, policy, or process.</rdfs:comment>
-        <rdfs:label xml:lang="en">Frequently Asked Questions</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://schema.org/FAQPage"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#FocusArea -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#FocusArea">
-        <rdfs:comment xml:lang="en">A conceptual aspect or interpretive dimension describing the emphasis of a guidance element — typically answering &apos;What?&apos;, &apos;How?&apos;, or &apos;Why?&apos;.</rdfs:comment>
-        <rdfs:label xml:lang="en">Focus Area</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#Framework -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#Framework">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:comment xml:lang="en">A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice.</rdfs:comment>
-        <rdfs:label xml:lang="en">Framework</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/Standard"/>
-        <rdfs:seeAlso rdf:resource="https://schema.org/Intangible"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#GuidanceElement -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#GuidanceElement">
-        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
-        <rdfs:comment xml:lang="en">A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Guidance Element</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://schema.org/CreativeWork"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#ObjectOrServiceAPI -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#ObjectOrServiceAPI">
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001190"/>
-        <rdfs:comment xml:lang="en">A data service or API providing machine-actionable access to guidance or data.</rdfs:comment>
-        <rdfs:label xml:lang="en">Object or Service / API</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#PersistentIdentifier -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#PersistentIdentifier">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#ExternalResource"/>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000675"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.org/fgv#resolvesTo"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://example.org/fgv#Annotation"/>
-                            <rdf:Description rdf:about="http://example.org/fgv#ObjectOrServiceAPI"/>
-                            <rdf:Description rdf:about="http://example.org/fgv#WebPage"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:onClass>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://example.org/fgv#WebPage"/>
-        <rdfs:comment xml:lang="en">An identifier that uniquely and persistently identifies a resource.</rdfs:comment>
-        <rdfs:label xml:lang="en">Persistent Identifier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#Procedure -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#Procedure">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:comment xml:lang="en">A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process.</rdfs:comment>
-        <rdfs:label xml:lang="en">Procedure</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://schema.org/HowTo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#Standard -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#Standard">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#GuidanceElement"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Standard"/>
-        <rdfs:comment xml:lang="en">Documented agreements containing technical specifications or criteria to ensure consistent quality, safety, or interoperability.</rdfs:comment>
-        <rdfs:label xml:lang="en">Standard</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://schema.org/TechArticle"/>
-    </owl:Class>
-    
-
-
-    <!-- http://example.org/fgv#WebPage -->
-
-
-    <owl:Class rdf:about="http://example.org/fgv#WebPage">
-        <rdfs:subClassOf rdf:resource="http://example.org/fgv#ExternalResource"/>
-        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000302"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.org/fgv#describes"/>
-                <owl:allValuesFrom rdf:resource="http://example.org/fgv#ObjectOrServiceAPI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A document or page accessible on the Web.</rdfs:comment>
-        <rdfs:label xml:lang="en">Web Page</rdfs:label>
-    </owl:Class>
     
 
 
@@ -504,6 +366,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
     <!-- https://schema.org/CreativeWork -->
 
 
@@ -515,6 +384,206 @@
 
 
     <owl:Class rdf:about="https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple"/>
+    
+
+
+    <!-- https://w3id.org/fgv#Annotation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#Annotation">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001166"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#ExternalResource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/fgv#resolvesTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/fgv#WebPage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/fgv#PersistentIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/fgv#WebPage"/>
+        <rdfs:comment xml:lang="en">A structured note or comment associated with another resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#Benchmark -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#Benchmark">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:comment xml:lang="en">Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Benchmark</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/DefinedTerm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#BestPractice -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#BestPractice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:comment xml:lang="en">Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Best Practice</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/BestPractice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#ExternalResource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#ExternalResource">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000614"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://semanticscience.org/resource/SIO_000341"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/fgv#Annotation"/>
+                            <rdf:Description rdf:about="https://w3id.org/fgv#PersistentIdentifier"/>
+                            <rdf:Description rdf:about="https://w3id.org/fgv#WebPage"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A resource that represents or provides access to a piece of guidance. May be a Persistent Identifier, a Web Page, or an Annotation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reference / External Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#FAQ -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#FAQ">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:comment xml:lang="en">A curated list of common queries and clear, concise answers about a product, service, policy, or process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequently Asked Questions</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/FAQPage"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#FocusArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#FocusArea">
+        <rdfs:comment xml:lang="en">A conceptual aspect or interpretive dimension describing the emphasis of a guidance element — typically answering &apos;What?&apos;, &apos;How?&apos;, or &apos;Why?&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Focus Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#Framework -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#Framework">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:comment xml:lang="en">A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice.</rdfs:comment>
+        <rdfs:label xml:lang="en">Framework</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/Standard"/>
+        <rdfs:seeAlso rdf:resource="https://schema.org/Intangible"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#GuidanceElement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#GuidanceElement">
+        <rdfs:subClassOf rdf:resource="https://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Guidance Element</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#ObjectOrServiceAPI -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#ObjectOrServiceAPI">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_001190"/>
+        <rdfs:comment xml:lang="en">A data service or API providing machine-actionable access to guidance or data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Object or Service / API</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#PersistentIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#PersistentIdentifier">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000675"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#ExternalResource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/fgv#resolvesTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/fgv#Annotation"/>
+                            <rdf:Description rdf:about="https://w3id.org/fgv#ObjectOrServiceAPI"/>
+                            <rdf:Description rdf:about="https://w3id.org/fgv#WebPage"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/fgv#WebPage"/>
+        <rdfs:comment xml:lang="en">An identifier that uniquely and persistently identifies a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Persistent Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#Procedure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#Procedure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:comment xml:lang="en">A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Procedure</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/HowTo"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#Standard -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#Standard">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Standard"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#GuidanceElement"/>
+        <rdfs:comment xml:lang="en">Documented agreements containing technical specifications or criteria to ensure consistent quality, safety, or interoperability.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://schema.org/TechArticle"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/fgv#WebPage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/fgv#WebPage">
+        <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000302"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/fgv#ExternalResource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/fgv#describes"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/fgv#ObjectOrServiceAPI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A document or page accessible on the Web.</rdfs:comment>
+        <rdfs:label xml:lang="en">Web Page</rdfs:label>
+    </owl:Class>
     
 
 
@@ -530,59 +599,6 @@
     
 
 
-    <!-- http://example.org/fgv# -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/fgv#">
-        <terms:title xml:lang="en">FAIR Guidance Vocabulary (FGV) — Core Ontology</terms:title>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/fgv#HowFocus -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/fgv#HowFocus">
-        <rdf:type rdf:resource="http://example.org/fgv#FocusArea"/>
-        <rdfs:comment xml:lang="en">Focuses on how the guidance should be operationalized — answering &apos;How should this be done?&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">Process (How)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/fgv#MoreFocus -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/fgv#MoreFocus">
-        <rdf:type rdf:resource="http://example.org/fgv#FocusArea"/>
-        <rdfs:comment xml:lang="en">Provides additional useful information about the topic, such as context, examples, tools, or references — answering &apos;What else is relevant or helpful to know?&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">More: Additional Information</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/fgv#WhatFocus -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/fgv#WhatFocus">
-        <rdf:type rdf:resource="http://example.org/fgv#FocusArea"/>
-        <rdfs:comment xml:lang="en">Focuses on what the guidance means and how it can be implemented — answering &apos;What does this mean?&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">Meaning / Implementation (What)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/fgv#WhyFocus -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/fgv#WhyFocus">
-        <rdf:type rdf:resource="http://example.org/fgv#FocusArea"/>
-        <rdfs:comment xml:lang="en">Focuses on why the guidance is important and its underlying motivation — answering &apos;Why follow this guideline?&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">Motivation (Why)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://creativecommons.org/licenses/by/4.0/ -->
 
 
@@ -590,6 +606,59 @@
         <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
         <rdfs:comment xml:lang="en">A permissive open license allowing reuse and distribution with attribution.</rdfs:comment>
         <rdfs:label xml:lang="en">Creative Commons Attribution 4.0 International</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fgv# -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fgv#">
+        <terms:title xml:lang="en">FAIR Guidance Vocabulary (FGV) — Core Ontology</terms:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fgv#HowFocus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fgv#HowFocus">
+        <rdf:type rdf:resource="https://w3id.org/fgv#FocusArea"/>
+        <rdfs:comment xml:lang="en">Focuses on how the guidance should be operationalized — answering &apos;How should this be done?&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">Process (How)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fgv#MoreFocus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fgv#MoreFocus">
+        <rdf:type rdf:resource="https://w3id.org/fgv#FocusArea"/>
+        <rdfs:comment xml:lang="en">Provides additional useful information about the topic, such as context, examples, tools, or references — answering &apos;What else is relevant or helpful to know?&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">More: Additional Information</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fgv#WhatFocus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fgv#WhatFocus">
+        <rdf:type rdf:resource="https://w3id.org/fgv#FocusArea"/>
+        <rdfs:comment xml:lang="en">Focuses on what the guidance means and how it can be implemented — answering &apos;What does this mean?&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">Meaning / Implementation (What)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/fgv#WhyFocus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/fgv#WhyFocus">
+        <rdf:type rdf:resource="https://w3id.org/fgv#FocusArea"/>
+        <rdfs:comment xml:lang="en">Focuses on why the guidance is important and its underlying motivation — answering &apos;Why follow this guideline?&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">Motivation (Why)</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
