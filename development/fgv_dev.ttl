@@ -1,0 +1,305 @@
+@prefix fgv:    <https://w3id.org/fgv#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix schema: <https://schema.org/> .
+@prefix sio:    <http://semanticscience.org/resource/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix fair:   <https://w3id.org/fair/principles/terms/> .
+@prefix ftr:    <https://w3id.org/ftr#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+# Ontology header
+#################################################################
+
+fgv: a owl:Ontology ;
+  owl:versionIRI <https://w3id.org/fgv/0.1.1> ;
+  owl:versionInfo "0.1.1" ;
+  dct:title "FAIR Guidance Vocabulary (FGV) — Core Ontology"@en ;
+  dct:creator <https://orcid.org/0000-0003-1106-8441> ,
+              <https://orcid.org/0000-0002-0255-5101> ,
+			  <https://orcid.org/0000-0002-7874-0362> ;
+  dct:created "2025-10-13"^^xsd:date ;
+  dct:modified "2025-10-13"^^xsd:date ;
+  dct:abstract "A vocabulary to describe Guidance."@en ;
+  dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:comment "An ontology capturing core concepts and relations from the FAIR Guidance diagram."@en .
+
+#################################################################
+# License individual
+#################################################################
+
+<https://creativecommons.org/licenses/by/4.0/> a owl:NamedIndividual , dct:LicenseDocument ;
+  rdfs:label "Creative Commons Attribution 4.0 International"@en ;
+  rdfs:comment "A permissive open license allowing reuse and distribution with attribution."@en .
+
+#################################################################
+# Guidance Element class with core descriptive properties
+#################################################################
+
+fgv:GuidanceElement a owl:Class ;
+  rdfs:subClassOf schema:CreativeWork ;
+  rdfs:label "Guidance Element"@en ;
+  rdfs:comment "A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc."@en ;
+  rdfs:seeAlso schema:CreativeWork .
+
+#################################################################
+# Guidance Subclasses
+#################################################################
+
+fgv:Framework a owl:Class ;
+  rdfs:subClassOf fgv:GuidanceElement ;
+  rdfs:label "Framework"@en ;
+  rdfs:comment "A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice."@en ;
+  rdfs:seeAlso dct:Standard , schema:Intangible .
+
+fgv:FAQ a owl:Class ;
+  rdfs:subClassOf fgv:GuidanceElement ;
+  rdfs:label "Frequently Asked Questions"@en ;
+  rdfs:comment "A curated list of common queries and clear, concise answers about a product, service, policy, or process."@en ;
+  rdfs:seeAlso schema:FAQPage .
+
+fgv:BestPractice a owl:Class ;
+  rdfs:subClassOf fgv:GuidanceElement ;
+  rdfs:label "Best Practice"@en ;
+  rdfs:comment "Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes."@en ;
+  rdfs:seeAlso schema:BestPractice .
+
+fgv:Benchmark a owl:Class ;
+  rdfs:subClassOf fgv:GuidanceElement ;
+  rdfs:label "Benchmark"@en ;
+  rdfs:comment "Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes."@en ;
+  rdfs:seeAlso schema:DefinedTerm .
+
+fgv:Procedure a owl:Class ;
+  rdfs:subClassOf fgv:GuidanceElement ;
+  rdfs:label "Procedure"@en ;
+  rdfs:comment "A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process."@en ;
+  rdfs:seeAlso schema:HowTo .
+
+fgv:Standard a owl:Class ;
+  rdfs:subClassOf fgv:GuidanceElement , dct:Standard ;
+  rdfs:label "Standard"@en ;
+  rdfs:comment "Documented agreements containing technical specifications or criteria to ensure consistent quality, safety, or interoperability."@en ;
+  rdfs:seeAlso schema:TechArticle .
+
+#################################################################
+# Descriptive properties
+#################################################################
+
+dct:title a owl:DatatypeProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range xsd:string ;
+  rdfs:label "title"@en ;
+  rdfs:comment "A human-readable title of the guidance element."@en .
+
+dct:description a owl:DatatypeProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range xsd:string ;
+  rdfs:label "description"@en ;
+  rdfs:comment "A textual description providing details about the guidance element."@en .
+
+dct:identifier a owl:DatatypeProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range xsd:anyURI ;
+  rdfs:label "IRI / identifier"@en ;
+  rdfs:comment "A globally unique IRI or other persistent identifier associated with the guidance element."@en .
+
+#################################################################
+# (source) creator of the guidance
+#################################################################
+schema:creator a owl:DatatypeProperty ;
+   rdfs:domain fgv:GuidanceElement ;
+   rdfs:range xsd:string ;
+   rdfs:label "creator"@en ;
+   rdfs:comment "A human-readable person or institution who created the guidance element."@en .
+   
+schema:maintainer a owl:DatatypeProperty ;
+   rdfs:domain fgv:GuidanceElement ;
+   rdfs:range xsd:string ;
+   rdfs:label "maintainer"@en ;
+   rdfs:comment "A human-readable person or institution who maintains the guidance element."@en .  
+   
+#################################################################
+# creation date
+#################################################################  
+schema:dateCreated a owl:DatatypeProperty ;
+   rdfs:domain fgv:GuidanceElement ;
+   rdfs:label "created"@en ;
+   rdfs:range xsd:dateTime ;
+   rdfs:comment "A date when the guidance element was created."@en .
+
+#################################################################
+# modified date
+#################################################################  
+schema:dateModified a owl:DatatypeProperty ;
+   rdfs:domain fgv:GuidanceElement ;
+   rdfs:label "modified"@en ;
+   rdfs:range xsd:dateTime ;
+   rdfs:comment "A date on which the guidance element was modified."@en .   
+  
+#################################################################
+# External Resources
+#################################################################
+
+fgv:ExternalResource a owl:Class ;
+  rdfs:label "Reference / External Resource"@en ;
+  rdfs:comment "A resource that represents or provides access to a piece of guidance. May be a Persistent Identifier, a Web Page, or an Annotation."@en ;
+  rdfs:subClassOf sio:SIO_000614 .
+
+fgv:PersistentIdentifier a owl:Class ;
+  rdfs:subClassOf fgv:ExternalResource , sio:SIO_000675 ;
+  rdfs:label "Persistent Identifier"@en ;
+  rdfs:comment "An identifier that uniquely and persistently identifies a resource."@en .
+
+fgv:WebPage a owl:Class ;
+  rdfs:subClassOf fgv:ExternalResource , sio:SIO_000302 ;
+  rdfs:label "Web Page"@en ;
+  rdfs:comment "A document or page accessible on the Web."@en .
+
+fgv:Annotation a owl:Class ;
+  rdfs:subClassOf fgv:ExternalResource , sio:SIO_001166 ;
+  rdfs:label "Annotation"@en ;
+  rdfs:comment "A structured note or comment associated with another resource."@en .
+
+fgv:ObjectOrServiceAPI a owl:Class ;
+  rdfs:subClassOf sio:SIO_001190 ;
+  rdfs:label "Object or Service / API"@en ;
+  rdfs:comment "A data service or API providing machine-actionable access to guidance or data."@en .
+
+
+#################################################################
+# Relations
+#################################################################
+
+sio:SIO_000341 a owl:ObjectProperty , owl:FunctionalProperty ;
+  rdfs:label "is manifested as"@en ;
+  rdfs:domain fgv:ExternalResource ;
+  rdfs:range fgv:ExternalResource ;
+  rdfs:comment "Relates an abstract reference to its single manifestation (e.g., PID, WebPage, or Annotation)."@en .
+
+fgv:domain a owl:ObjectProperty , owl:FunctionalProperty ;
+  rdfs:label  "domain"@en ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range  skos:Concept ;
+  rdfs:comment "Field of science and technology classification (FOS) for this guidance element."@en .
+# Examples for "Languages and literature":
+# http://dd.eionet.europa.eu/vocabulary/eurostat/fos07/FOS602
+# https://kos.lifewatch.eu/thesauri/fos/c_87fbc4d4  
+
+fgv:resolvesTo a owl:ObjectProperty , owl:FunctionalProperty ;
+  owl:equivalentProperty dcat:accessURL ;
+  rdfs:domain [ a owl:Class ; owl:unionOf (fgv:PersistentIdentifier fgv:Annotation) ] ;
+  rdfs:range  [ a owl:Class ; owl:unionOf (fgv:ExternalResource fgv:ObjectOrServiceAPI) ] ;
+  rdfs:label "resolves to"@en ;
+  rdfs:comment "Indicates the resource a persistent identifier or annotation resolves to (e.g., a web page, annotation, or API)."@en .
+
+fgv:describes a owl:ObjectProperty ;
+  owl:equivalentProperty foaf:primaryTopic ;
+  rdfs:domain fgv:WebPage ;
+  rdfs:range fgv:ObjectOrServiceAPI ;
+  rdfs:label "describes"@en ;
+  rdfs:comment "Relates a web page to the API or object it describes."@en .
+
+### Property linking a GuidanceElement to one or more FAIR Principles
+fgv:relatesToFAIRPrinciple a owl:ObjectProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range fair:FAIR-Principle-or-SubPrinciple ;
+  rdfs:label "relates to FAIR Principle"@en ;
+  rdfs:comment "Links a guidance element to zero or more FAIR Principles (or Sub-Principles) as defined in the FAIR Vocabulary."@en .
+
+### Property linking a GuidanceElement to one or more FAIR Principles
+fgv:relatesToFAIRPrinciple a owl:ObjectProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range fair:FAIR-Principle-or-SubPrinciple ;
+  rdfs:label "relates to FAIR Principle"@en ;
+  rdfs:comment "Links a guidance element to zero or more FAIR Principles (or Sub-Principles) as defined in the FAIR Vocabulary."@en .
+
+fgv:supports a owl:ObjectProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range rdfs:Resource ;
+  rdfs:label "supports"@en ;
+  rdfs:comment "Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion)."@en .
+
+# fgv:supports a owl:ObjectProperty ;
+#   rdfs:domain fgv:GuidanceElement ;
+#   rdfs:range [
+#     a owl:Class ;
+#     owl:unionOf (
+#       ftr:Benchmark
+#       ftr:Metric
+#       ftr:Criterion
+#       ftr:Test
+#       ftr:Principle
+#     )
+#   ] ;
+#   rdfs:label "supports"@en ;
+#   rdfs:comment "Links a Guidance Element to any FTR entity (Benchmark, Metric, Criterion, Test, etc.)."@en .
+
+#################################################################
+# Logical constraints and disjointness
+#################################################################
+
+fgv:PersistentIdentifier owl:disjointWith fgv:WebPage , fgv:Annotation .
+fgv:WebPage owl:disjointWith fgv:Annotation .
+
+fgv:ExternalResource rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty sio:SIO_000341 ;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+  owl:onClass [ a owl:Class ; owl:unionOf (fgv:PersistentIdentifier fgv:WebPage fgv:Annotation) ]
+] .
+
+fgv:PersistentIdentifier rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty fgv:resolvesTo ;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+  owl:onClass [ a owl:Class ; owl:unionOf (fgv:WebPage fgv:ObjectOrServiceAPI fgv:Annotation) ]
+] .
+
+fgv:Annotation rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty fgv:resolvesTo ;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+  owl:onClass fgv:WebPage
+] .
+
+fgv:WebPage rdfs:subClassOf [
+  a owl:Restriction ;
+  owl:onProperty fgv:describes ;
+  owl:allValuesFrom fgv:ObjectOrServiceAPI
+] .
+
+#################################################################
+# Focus Areas
+#################################################################
+
+fgv:FocusArea a owl:Class ;
+  rdfs:label "Focus Area"@en ;
+  rdfs:comment "A conceptual aspect or interpretive dimension describing the emphasis of a guidance element — typically answering 'What?', 'How?', or 'Why?'."@en .
+
+fgv:hasFocusArea a owl:ObjectProperty , owl:FunctionalProperty ;
+  rdfs:domain fgv:GuidanceElement ;
+  rdfs:range fgv:FocusArea ;
+  rdfs:label "has focus area"@en ;
+  rdfs:comment "Relates a guidance element to one of its focus areas (What, How, or Why)."@en .
+
+fgv:WhatFocus a fgv:FocusArea , owl:NamedIndividual ;
+  rdfs:label "Meaning / Implementation (What)"@en ;
+  rdfs:comment "Focuses on what the guidance means and how it can be implemented — answering 'What does this mean?'"@en .
+
+fgv:HowFocus a fgv:FocusArea , owl:NamedIndividual ;
+  rdfs:label "Process (How)"@en ;
+  rdfs:comment "Focuses on how the guidance should be operationalized — answering 'How should this be done?'"@en .
+
+fgv:WhyFocus a fgv:FocusArea , owl:NamedIndividual ;
+  rdfs:label "Motivation (Why)"@en ;
+  rdfs:comment "Focuses on why the guidance is important and its underlying motivation — answering 'Why follow this guideline?'"@en .
+
+fgv:MoreFocus a fgv:FocusArea , owl:NamedIndividual ;
+  rdfs:label "More: Additional Information"@en ;
+  rdfs:comment "Provides additional useful information about the topic, such as context, examples, tools, or references — answering 'What else is relevant or helpful to know?'"@en .
