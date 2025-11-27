@@ -15,9 +15,9 @@ The proposed vocabulary has been created within T3.4 (WP3) and has been tested a
 ## Core Ontology Guidance Elements 
 The following main concepts have been identified:  
 <ul>
-<li>**GuidanceElement**: A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc.   
-<li>**ExternalResource**:  
-<li>**FocusArea**:  
+<li><b>GuidanceElement</b>: A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc. </li>
+<li><b>ExternalResource</b>:</li>
+<li><b>FocusArea</b>:</li>
 </ul>
 
 ![FGV diagram](./development/img/fgv-dot_v010.png "FGV overview")
