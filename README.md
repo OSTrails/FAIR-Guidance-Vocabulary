@@ -24,9 +24,9 @@ The following main concepts have been identified:
 
 ## Examples
 Please see the [latest specification draft for examples](https://w3id.org/fgv#intro).   
-Demo FAIR Guidance (FGV) implementation dashboard: [https://fairassessment.dansdemo.nl/guidance](https://fairassessment.dansdemo.nl/guidance)
+Demo FAIR Guidance (FGV) implementation dashboard: [https://fairassessment.dansdemo.nl/guidance](https://fairassessment.dansdemo.nl/guidance). 
 
 
----
-*This work is carried out in the context of the [https://ostrails.eu/](OSTrails project), funded by the European Union’s Horizon Europe framework programme under grant agreement No. 101130187.
-Main development by Task 3.4: "Enhancing “assessment” with “guidance”", as part of the working package 3 (WP3): "Assessment tools & services".*  
+--
+<i>This work is carried out in the context of the <a href="https://ostrails.eu/" target="_blank">OSTrails project</a>, funded by the European Union’s Horizon Europe framework programme under grant agreement No. 101130187.
+Main development by Task 3.4: "Enhancing “assessment” with “guidance”", as part of the working package 3 (WP3): "Assessment tools & services".</i>
