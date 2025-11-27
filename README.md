@@ -16,8 +16,8 @@ The proposed vocabulary has been created within T3.4 (WP3) and has been tested a
 The following main concepts have been identified:  
 <ul>
 <li><b>GuidanceElement</b>: A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc. </li>
-<li><b>ExternalResource</b>:</li>
-<li><b>FocusArea</b>:</li>
+<li><b>ExternalResource</b>: A resource that represents or provides access to a piece of guidance. May be a Persistent Identifier, a Web Page, or an Annotation.</li>
+<li><b>FocusArea</b>: A conceptual aspect or interpretive dimension describing the emphasis of a guidance element — typically answering 'What?', 'How?', or 'Why?'.</li>
 </ul>
 
 ![FGV diagram](./development/img/fgv-dot_v010.png "FGV overview")
