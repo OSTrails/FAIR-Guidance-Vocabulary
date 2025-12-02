@@ -20,7 +20,7 @@ The following main concepts have been identified:
 <li><b>FocusArea</b>: A conceptual aspect or interpretive dimension describing the emphasis of a guidance element — typically answering 'What?', 'How?', or 'Why?'.</li>
 </ul>
 
-![FGV diagram](./development/img/fgv-dot_v010.png "FGV overview")
+![FGV diagram](./development/img/fgv_class_v011.drawio.png "FGV overview")
 
 ## Examples
 Please see the [latest specification draft for examples](https://w3id.org/fgv#intro).   
