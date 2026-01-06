@@ -1,4 +1,4 @@
-# FAIR Guidance Vocabulary (FTR)
+# FAIR Guidance Vocabulary (FGV)
 
 
 Repository to track the requirements and specifications of the FAIR guidance vocabulary ontology. It is a model for the encoding, dissemination, and linking of guidance to assessment concepts.
