@@ -1,0 +1,433 @@
+@prefix : <https://w3id.org/fgv#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/fgv#> .
+
+<https://w3id.org/fgv#> rdf:type owl:Ontology ;
+                         owl:versionIRI <https://w3id.org/fgv/1.0.0> ;
+                         <http://purl.org/dc/terms/abstract> "A vocabulary to describe Guidance."@en ;
+                         <http://purl.org/dc/terms/created> "2025-10-13"^^xsd:date ;
+                         <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-0255-5101> ,
+                                                            <https://orcid.org/0000-0002-7874-0362> ,
+                                                            <https://orcid.org/0000-0003-1106-8441> ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                         <http://purl.org/dc/terms/modified> "2026-09-23"^^xsd:date ;
+                         <http://purl.org/dc/terms/title> "FAIR Guidance Vocabulary (FGV) — Core Ontology"@en ;
+                         rdfs:comment "An ontology capturing core concepts and relations from the FAIR Guidance diagram."@en ;
+                         owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://semanticscience.org/resource/SIO_000341
+<http://semanticscience.org/resource/SIO_000341> rdf:type owl:ObjectProperty ;
+                                                 rdfs:comment "Relates a guidance element or an abstract external resource to its manifestation as a concrete external resource (e.g., PID, WebPage, or Annotation)."@en ;
+                                                 rdfs:label "is manifested as"@en .
+
+
+###  http://www.w3.org/ns/dqv#inDimension
+<http://www.w3.org/ns/dqv#inDimension> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain :GuidanceElement ;
+                                       rdfs:range <http://www.w3.org/ns/dqv#Dimension> ;
+                                       rdfs:comment "Relates a guidance element to the quality dimension it addresses."@en ;
+                                       rdfs:label "in dimension"@en .
+
+
+###  http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> rdf:type owl:ObjectProperty ;
+                                       rdfs:comment "Relates a guidance element to a location associated with its provenance."@en ;
+                                       rdfs:label "location"@en .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty ;
+                                            rdfs:comment "Relates a guidance element to an agent associated with its provenance."@en ;
+                                            rdfs:label "agent"@en .
+
+
+###  http://www.w3.org/ns/prov#wasRevisionOf
+<http://www.w3.org/ns/prov#wasRevisionOf> rdf:type owl:ObjectProperty ;
+                                          rdfs:comment "Relates a resource to an earlier resource of the same type that it is a revised version of."@en ;
+                                          rdfs:label "was revision of"@en .
+
+
+###  https://w3id.org/fgv#describes
+:describes rdf:type owl:ObjectProperty ;
+           rdfs:domain :WebPage ;
+           rdfs:range :ObjectOrServiceAPI ;
+           rdfs:comment "Relates a web page to the API or object it describes."@en ;
+           rdfs:label "describes"@en .
+
+
+###  https://w3id.org/fgv#domain
+:domain rdf:type owl:ObjectProperty ;
+        rdfs:domain :GuidanceElement ;
+        rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+        rdfs:comment "Field of science and technology classification (FOS) for this guidance element."@en ;
+        rdfs:label "domain"@en .
+
+
+###  https://w3id.org/fgv#hasFocusArea
+:hasFocusArea rdf:type owl:ObjectProperty ;
+              rdfs:domain :GuidanceElement ;
+              rdfs:range :FocusArea ;
+              rdfs:comment "Relates a guidance element to a focus area addressed by the guidance."@en ;
+              rdfs:label "has focus area"@en .
+
+
+###  https://w3id.org/fgv#hasMaturityValue
+:hasMaturityValue rdf:type owl:ObjectProperty ;
+                  rdfs:domain :GuidanceElement ;
+                  rdfs:range :MaturityValue ;
+                  rdfs:comment "Relates a guidance element to its maturity value."@en ;
+                  rdfs:label "has maturity value"@en .
+
+
+###  https://w3id.org/fgv#hasOrderedInstructions
+:hasOrderedInstructions rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Procedure ;
+                        rdfs:range rdf:List ;
+                        rdfs:comment "A procedure may list its instructions in a defined order."@en ;
+                        rdfs:label "has ordered instructions"@en .
+
+
+###  https://w3id.org/fgv#resolvesTo
+:resolvesTo rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :PersistentIdentifier ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :Annotation
+                                       :ObjectOrServiceAPI
+                                       :WebPage
+                                     )
+                       ] ;
+            rdfs:comment "Indicates the resource a persistent identifier or annotation resolves to (e.g., a web page, annotation, or API)."@en ;
+            rdfs:label "resolves to"@en ;
+            rdfs:seeAlso <http://www.w3.org/ns/dcat#accessURL> .
+
+
+###  https://w3id.org/fgv#supports
+:supports rdf:type owl:ObjectProperty ;
+          rdfs:domain :GuidanceElement ;
+          rdfs:range rdfs:Resource ;
+          rdfs:comment "Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion)."@en ;
+          rdfs:label "supports"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/terms/LicenseDocument
+<http://purl.org/dc/terms/LicenseDocument> rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/Standard
+<http://purl.org/dc/terms/Standard> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000302
+<http://semanticscience.org/resource/SIO_000302> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_000675
+<http://semanticscience.org/resource/SIO_000675> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_001166
+<http://semanticscience.org/resource/SIO_001166> rdf:type owl:Class .
+
+
+###  http://semanticscience.org/resource/SIO_001190
+<http://semanticscience.org/resource/SIO_001190> rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+rdf:List rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#Dimension
+<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#QualityMeasurement
+<http://www.w3.org/ns/dqv#QualityMeasurement> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Location
+<http://www.w3.org/ns/prov#Location> rdf:type owl:Class .
+
+
+###  https://schema.org/CreativeWork
+<https://schema.org/CreativeWork> rdf:type owl:Class .
+
+
+###  https://w3id.org/fgv#Annotation
+:Annotation rdf:type owl:Class ;
+            rdfs:subClassOf <http://semanticscience.org/resource/SIO_001166> ,
+                            :ExternalResource ;
+            rdfs:comment "A structured note or comment associated with another resource."@en ;
+            rdfs:label "Annotation"@en .
+
+
+###  https://w3id.org/fgv#Benchmark
+:Benchmark rdf:type owl:Class ;
+           rdfs:subClassOf :GuidanceElement ;
+           rdfs:comment "Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes."@en ;
+           rdfs:label "Benchmark"@en ;
+           rdfs:seeAlso <https://schema.org/DefinedTerm> .
+
+
+###  https://w3id.org/fgv#BestPractice
+:BestPractice rdf:type owl:Class ;
+              rdfs:subClassOf :GuidanceElement ;
+              rdfs:comment "Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes."@en ;
+              rdfs:label "Best Practice"@en ;
+              rdfs:seeAlso <https://schema.org/BestPractice> .
+
+
+###  https://w3id.org/fgv#ExternalResource
+:ExternalResource rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://www.w3.org/ns/prov#atLocation> ;
+                                    owl:allValuesFrom <http://www.w3.org/ns/prov#Location>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://www.w3.org/ns/prov#wasAttributedTo> ;
+                                    owl:allValuesFrom <http://www.w3.org/ns/prov#Agent>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://www.w3.org/ns/prov#wasRevisionOf> ;
+                                    owl:allValuesFrom :ExternalResource
+                                  ] ;
+                  rdfs:comment """
+A resource that represents or provides access to a piece of guidance,
+such as a Persistent Identifier, Web Page, Annotation, or Object/Service API.
+"""@en ;
+                  rdfs:label "Reference / External Resource"@en .
+
+
+###  https://w3id.org/fgv#FAQ
+:FAQ rdf:type owl:Class ;
+     rdfs:subClassOf :GuidanceElement ;
+     rdfs:comment "A curated list of common queries and clear, concise answers about a product, service, policy, or process."@en ;
+     rdfs:label "Frequently Asked Questions"@en ;
+     rdfs:seeAlso <https://schema.org/FAQPage> .
+
+
+###  https://w3id.org/fgv#FocusArea
+:FocusArea rdf:type owl:Class ;
+           rdfs:comment "The aspect of a Guidance Element addressed by the guidance, such as what it concerns, why it is relevant, how it can be applied, additional information, or an expected value."@en ;
+           rdfs:label "Focus Area"@en .
+
+
+###  https://w3id.org/fgv#Framework
+:Framework rdf:type owl:Class ;
+           rdfs:subClassOf :GuidanceElement ;
+           rdfs:comment "A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice."@en ;
+           rdfs:label "Framework"@en ;
+           rdfs:seeAlso <http://purl.org/dc/terms/Standard> ,
+                        <https://schema.org/Intangible> .
+
+
+###  https://w3id.org/fgv#GuidanceElement
+:GuidanceElement rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                 <https://schema.org/CreativeWork> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://semanticscience.org/resource/SIO_000341> ;
+                                   owl:allValuesFrom :ExternalResource
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/ns/prov#atLocation> ;
+                                   owl:allValuesFrom <http://www.w3.org/ns/prov#Location>
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/ns/prov#wasAttributedTo> ;
+                                   owl:allValuesFrom <http://www.w3.org/ns/prov#Agent>
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://www.w3.org/ns/prov#wasRevisionOf> ;
+                                   owl:allValuesFrom :GuidanceElement
+                                 ] ;
+                 rdfs:comment "A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc."@en ;
+                 rdfs:label "Guidance Element"@en ;
+                 rdfs:seeAlso <https://schema.org/CreativeWork> .
+
+
+###  https://w3id.org/fgv#Guideline
+:Guideline rdf:type owl:Class ;
+           rdfs:subClassOf :GuidanceElement ;
+           rdfs:comment "A set of recommendations describing an approach to achieve a desired outcome, expressed as an ordered list of Instructions."@en ;
+           rdfs:label "Guideline"@en .
+
+
+###  https://w3id.org/fgv#Instruction
+:Instruction rdf:type owl:Class ;
+             rdfs:subClassOf :GuidanceElement ;
+             rdfs:comment "A single, discrete step contained within a Standard or Guideline."@en ;
+             rdfs:label "Instruction"@en .
+
+
+###  https://w3id.org/fgv#MaturityValue
+:MaturityValue rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/dqv#QualityMeasurement> ;
+               rdfs:comment "A quality measurement expressing the maturity level of a guidance element."@en ;
+               rdfs:label "Maturity Value"@en .
+
+
+###  https://w3id.org/fgv#ObjectOrServiceAPI
+:ObjectOrServiceAPI rdf:type owl:Class ;
+                    rdfs:subClassOf <http://semanticscience.org/resource/SIO_001190> ,
+                                    :ExternalResource ;
+                    rdfs:comment "A data service or API providing machine-actionable access to guidance or data."@en ;
+                    rdfs:label "Object or Service / API"@en .
+
+
+###  https://w3id.org/fgv#PersistentIdentifier
+:PersistentIdentifier rdf:type owl:Class ;
+                      rdfs:subClassOf <http://semanticscience.org/resource/SIO_000675> ,
+                                      :ExternalResource ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :resolvesTo ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :Annotation
+                                                                    :ObjectOrServiceAPI
+                                                                    :WebPage
+                                                                  )
+                                                    ]
+                                      ] ;
+                      rdfs:comment "An identifier that uniquely and persistently identifies a resource."@en ;
+                      rdfs:label "Persistent Identifier"@en .
+
+
+###  https://w3id.org/fgv#Procedure
+:Procedure rdf:type owl:Class ;
+           rdfs:subClassOf :GuidanceElement ;
+           rdfs:comment "A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process."@en ;
+           rdfs:label "Procedure"@en ;
+           rdfs:seeAlso <https://schema.org/HowTo> .
+
+
+###  https://w3id.org/fgv#Standard
+:Standard rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.org/dc/terms/Standard> ,
+                          :GuidanceElement ;
+          rdfs:comment "Documented agreements containing technical specifications or criteria to ensure consistent quality, safety, or interoperability."@en ;
+          rdfs:label "Standard"@en ;
+          rdfs:seeAlso <https://schema.org/TechArticle> .
+
+
+###  https://w3id.org/fgv#WebPage
+:WebPage rdf:type owl:Class ;
+         rdfs:subClassOf <http://semanticscience.org/resource/SIO_000302> ,
+                         :ExternalResource ;
+         rdfs:comment "A document or page accessible on the Web."@en ;
+         rdfs:label "Web Page"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://creativecommons.org/licenses/by/4.0/
+<https://creativecommons.org/licenses/by/4.0/> rdf:type owl:NamedIndividual ,
+                                                        <http://purl.org/dc/terms/LicenseDocument> ;
+                                               rdfs:comment "A permissive open license allowing reuse and distribution with attribution."@en ;
+                                               rdfs:label "Creative Commons Attribution 4.0 International"@en .
+
+
+###  https://w3id.org/fgv#ExpectedValueFocus
+:ExpectedValueFocus rdf:type owl:NamedIndividual ,
+                             :FocusArea ;
+                    rdfs:comment "Guidance describing the expected value, result, or outcome."@en ;
+                    rdfs:label "Expected Value"@en .
+
+
+###  https://w3id.org/fgv#HowFocus
+:HowFocus rdf:type owl:NamedIndividual ,
+                   :FocusArea ;
+          rdfs:comment "Guidance describing how something can be implemented, performed, or evaluated."@en ;
+          rdfs:label "How"@en .
+
+
+###  https://w3id.org/fgv#MoreFocus
+:MoreFocus rdf:type owl:NamedIndividual ,
+                    :FocusArea ;
+           rdfs:comment "Guidance providing additional information or resources."@en ;
+           rdfs:label "More"@en .
+
+
+###  https://w3id.org/fgv#WhatFocus
+:WhatFocus rdf:type owl:NamedIndividual ,
+                    :FocusArea ;
+           rdfs:comment "Guidance describing what is being addressed or evaluated."@en ;
+           rdfs:label "What"@en .
+
+
+###  https://w3id.org/fgv#WhyFocus
+:WhyFocus rdf:type owl:NamedIndividual ,
+                   :FocusArea ;
+          rdfs:comment "Guidance explaining why the subject is relevant or important."@en ;
+          rdfs:label "Why"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

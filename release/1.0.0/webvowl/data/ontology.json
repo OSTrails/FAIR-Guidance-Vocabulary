@@ -1,0 +1,1081 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://w3id.org/fgv", "http://www.w3.org/ns/prov", "http://www.w3.org/ns/dqv", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2004/02/skos/core", "http://semanticscience.org/resource" ],
+    "title" : {
+      "en" : "FAIR Guidance Vocabulary (FGV) — Core Ontology"
+    },
+    "iri" : "https://w3id.org/fgv#",
+    "version" : "1.0.0",
+    "author" : [ "https://orcid.org/0000-0002-0255-5101", "https://orcid.org/0000-0002-7874-0362", "https://orcid.org/0000-0003-1106-8441" ],
+    "comments" : {
+      "en" : "An ontology capturing core concepts and relations from the FAIR Guidance diagram."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-1106-8441",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-0255-5101",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0002-7874-0362",
+        "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-10-13",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-09-23",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "A vocabulary to describe Guidance.",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FAIR Guidance Vocabulary (FGV) — Core Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/fgv#Instruction",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Instruction",
+      "en" : "Instruction"
+    },
+    "comment" : {
+      "en" : "A single, discrete step contained within a Standard or Guideline."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Entity",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "4", "2" ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/fgv#Benchmark",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/DefinedTerm",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Benchmark",
+      "en" : "Benchmark"
+    },
+    "comment" : {
+      "en" : "Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes."
+    },
+    "id" : "8",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#GuidanceElement",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/CreativeWork",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GuidanceElement",
+      "en" : "Guidance Element"
+    },
+    "subClasses" : [ "13", "6", "8", "14", "1", "15", "16", "17" ],
+    "comment" : {
+      "en" : "A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc."
+    },
+    "id" : "2",
+    "superClasses" : [ "3", "12" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#Procedure",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/HowTo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Procedure",
+      "en" : "Procedure"
+    },
+    "comment" : {
+      "en" : "A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process."
+    },
+    "id" : "14",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#FocusArea",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FocusArea",
+      "en" : "Focus Area"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fgv#ExpectedValueFocus",
+      "baseIri" : "https://w3id.org/fgv",
+      "comment" : {
+        "en" : "Guidance describing the expected value, result, or outcome."
+      },
+      "labels" : {
+        "IRI-based" : "ExpectedValueFocus",
+        "en" : "Expected Value"
+      }
+    }, {
+      "iri" : "https://w3id.org/fgv#HowFocus",
+      "baseIri" : "https://w3id.org/fgv",
+      "comment" : {
+        "en" : "Guidance describing how something can be implemented, performed, or evaluated."
+      },
+      "labels" : {
+        "IRI-based" : "HowFocus",
+        "en" : "How"
+      }
+    }, {
+      "iri" : "https://w3id.org/fgv#WhatFocus",
+      "baseIri" : "https://w3id.org/fgv",
+      "comment" : {
+        "en" : "Guidance describing what is being addressed or evaluated."
+      },
+      "labels" : {
+        "IRI-based" : "WhatFocus",
+        "en" : "What"
+      }
+    }, {
+      "iri" : "https://w3id.org/fgv#WhyFocus",
+      "baseIri" : "https://w3id.org/fgv",
+      "comment" : {
+        "en" : "Guidance explaining why the subject is relevant or important."
+      },
+      "labels" : {
+        "IRI-based" : "WhyFocus",
+        "en" : "Why"
+      }
+    }, {
+      "iri" : "https://w3id.org/fgv#MoreFocus",
+      "baseIri" : "https://w3id.org/fgv",
+      "comment" : {
+        "en" : "Guidance providing additional information or resources."
+      },
+      "labels" : {
+        "IRI-based" : "MoreFocus",
+        "en" : "More"
+      }
+    } ],
+    "comment" : {
+      "en" : "The aspect of a Guidance Element addressed by the guidance, such as what it concerns, why it is relevant, how it can be applied, additional information, or an expected value."
+    },
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/fgv#ExternalResource",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExternalResource",
+      "en" : "Reference / External Resource"
+    },
+    "subClasses" : [ "23", "33", "20", "10" ],
+    "comment" : {
+      "en" : "\nA resource that represents or provides access to a piece of guidance,\nsuch as a Persistent Identifier, Web Page, Annotation, or Object/Service API.\n"
+    },
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#Dimension",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dimension"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/fgv#Guideline",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Guideline",
+      "en" : "Guideline"
+    },
+    "comment" : {
+      "en" : "A set of recommendations describing an approach to achieve a desired outcome, expressed as an ordered list of Instructions."
+    },
+    "id" : "16",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#FAQ",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/FAQPage",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FAQ",
+      "en" : "Frequently Asked Questions"
+    },
+    "comment" : {
+      "en" : "A curated list of common queries and clear, concise answers about a product, service, policy, or process."
+    },
+    "id" : "13",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#Annotation",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Annotation",
+      "en" : "Annotation"
+    },
+    "comment" : {
+      "en" : "A structured note or comment associated with another resource."
+    },
+    "id" : "33",
+    "superClasses" : [ "4", "34" ]
+  }, {
+    "iri" : "https://schema.org/CreativeWork",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CreativeWork"
+    },
+    "subClasses" : [ "2" ],
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "List"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://purl.org/dc/terms/LicenseDocument",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LicenseDocument"
+    },
+    "individuals" : [ {
+      "iri" : "https://creativecommons.org/licenses/by/4.0/",
+      "baseIri" : "https://creativecommons.org/licenses/by",
+      "comment" : {
+        "en" : "A permissive open license allowing reuse and distribution with attribution."
+      },
+      "labels" : {
+        "en" : "Creative Commons Attribution 4.0 International"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/fgv#BestPractice",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/BestPractice",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BestPractice",
+      "en" : "Best Practice"
+    },
+    "comment" : {
+      "en" : "Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes."
+    },
+    "id" : "17",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#WebPage",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WebPage",
+      "en" : "Web Page"
+    },
+    "comment" : {
+      "en" : "A document or page accessible on the Web."
+    },
+    "id" : "23",
+    "superClasses" : [ "4", "24" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#Standard",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/TechArticle",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Standard",
+      "en" : "Standard"
+    },
+    "comment" : {
+      "en" : "Documented agreements containing technical specifications or criteria to ensure consistent quality, safety, or interoperability."
+    },
+    "id" : "6",
+    "superClasses" : [ "7", "2" ]
+  }, {
+    "iri" : "http://semanticscience.org/resource/SIO_001166",
+    "baseIri" : "http://semanticscience.org/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIO_001166"
+    },
+    "subClasses" : [ "33" ],
+    "attributes" : [ "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://semanticscience.org/resource/SIO_000675",
+    "baseIri" : "http://semanticscience.org/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIO_000675"
+    },
+    "subClasses" : [ "20" ],
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "instances" : 0,
+    "union" : [ "23", "33", "10" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/fgv#Framework",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/Standard",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/Intangible",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Framework",
+      "en" : "Framework"
+    },
+    "comment" : {
+      "en" : "A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice."
+    },
+    "id" : "15",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Location",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://semanticscience.org/resource/SIO_001190",
+    "baseIri" : "http://semanticscience.org/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIO_001190"
+    },
+    "subClasses" : [ "10" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#QualityMeasurement",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualityMeasurement"
+    },
+    "subClasses" : [ "26" ],
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://semanticscience.org/resource/SIO_000302",
+    "baseIri" : "http://semanticscience.org/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIO_000302"
+    },
+    "subClasses" : [ "23" ],
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://purl.org/dc/terms/Standard",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Standard"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/fgv#MaturityValue",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaturityValue",
+      "en" : "Maturity Value"
+    },
+    "comment" : {
+      "en" : "A quality measurement expressing the maturity level of a guidance element."
+    },
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#PersistentIdentifier",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PersistentIdentifier",
+      "en" : "Persistent Identifier"
+    },
+    "comment" : {
+      "en" : "An identifier that uniquely and persistently identifies a resource."
+    },
+    "id" : "20",
+    "superClasses" : [ "4", "21" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#ObjectOrServiceAPI",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObjectOrServiceAPI",
+      "en" : "Object or Service / API"
+    },
+    "comment" : {
+      "en" : "A data service or API providing machine-actionable access to guidance or data."
+    },
+    "id" : "10",
+    "superClasses" : [ "4", "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38"
+  } ],
+  "property" : [ {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "56",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "57",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "58",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "59",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "65",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "range" : "24",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "4",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://www.w3.org/ns/dqv#inDimension",
+    "baseIri" : "http://www.w3.org/ns/dqv",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "inDimension",
+      "en" : "in dimension"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element to the quality dimension it addresses."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "4",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "range" : "34",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "12",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/fgv#describes",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "describes",
+      "en" : "describes"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Relates a web page to the API or object it describes."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/fgv#supports",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "supports",
+      "en" : "supports"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion)."
+    },
+    "attributes" : [ "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/fgv#hasMaturityValue",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasMaturityValue",
+      "en" : "has maturity value"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element to its maturity value."
+    },
+    "attributes" : [ "object" ],
+    "id" : "39"
+  }, {
+    "range" : "4",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "range" : "2",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "4",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "2",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "range" : "2",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "2",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/fgv#hasOrderedInstructions",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "hasOrderedInstructions",
+      "en" : "has ordered instructions"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "A procedure may list its instructions in a defined order."
+    },
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "range" : "2",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "2",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "range" : "2",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#atLocation",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "atLocation",
+      "en" : "location"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates a guidance element to a location associated with its provenance."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "wasRevisionOf",
+      "en" : "was revision of"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a resource to an earlier resource of the same type that it is a revised version of."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "wasAttributedTo",
+      "en" : "agent"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element to an agent associated with its provenance."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://semanticscience.org/resource/SIO_000341",
+    "baseIri" : "http://semanticscience.org/resource",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "SIO_000341",
+      "en" : "is manifested as"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element or an abstract external resource to its manifestation as a concrete external resource (e.g., PID, WebPage, or Annotation)."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#atLocation",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "atLocation",
+      "en" : "location"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element to a location associated with its provenance."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "59"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/fgv#resolvesTo",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "60",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/dcat#accessURL",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "resolvesTo",
+      "en" : "resolves to"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Indicates the resource a persistent identifier or annotation resolves to (e.g., a web page, annotation, or API)."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "3",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "wasAttributedTo",
+      "en" : "agent"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates a guidance element to an agent associated with its provenance."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "64"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "wasRevisionOf",
+      "en" : "was revision of"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates a resource to an earlier resource of the same type that it is a revised version of."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/fgv#hasFocusArea",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasFocusArea",
+      "en" : "has focus area"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element to a focus area addressed by the guidance."
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/fgv#domain",
+    "baseIri" : "https://w3id.org/fgv",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "domain",
+      "en" : "domain"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Field of science and technology classification (FOS) for this guidance element."
+    },
+    "attributes" : [ "object" ],
+    "id" : "67"
+  } ]
+}
