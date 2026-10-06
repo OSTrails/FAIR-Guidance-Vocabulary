@@ -91,14 +91,6 @@ xsd:date rdf:type rdfs:Datatype .
                                           rdfs:label "was revision of"@en .
 
 
-###  https://w3id.org/fgv#describes
-:describes rdf:type owl:ObjectProperty ;
-           rdfs:domain :WebPage ;
-           rdfs:range :ObjectOrServiceAPI ;
-           rdfs:comment "Relates a web page to the API or object it describes."@en ;
-           rdfs:label "describes"@en .
-
-
 ###  https://w3id.org/fgv#domain
 :domain rdf:type owl:ObjectProperty ;
         rdfs:domain :GuidanceElement ;
@@ -146,14 +138,6 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:seeAlso <http://www.w3.org/ns/dcat#accessURL> .
 
 
-###  https://w3id.org/fgv#supports
-:supports rdf:type owl:ObjectProperty ;
-          rdfs:domain :GuidanceElement ;
-          rdfs:range rdfs:Resource ;
-          rdfs:comment "Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion)."@en ;
-          rdfs:label "supports"@en .
-
-
 #################################################################
 #    Classes
 #################################################################
@@ -184,10 +168,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 rdf:List rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept

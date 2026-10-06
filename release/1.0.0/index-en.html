@@ -218,9 +218,6 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">agent</a>
    </li>
    <li>
-      <a href="#describes" title="https://w3id.org/fgv#describes">describes</a>
-   </li>
-   <li>
       <a href="#domain" title="https://w3id.org/fgv#domain">domain</a>
    </li>
    <li>
@@ -243,9 +240,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#resolvesTo" title="https://w3id.org/fgv#resolvesTo">resolves to</a>
-   </li>
-   <li>
-      <a href="#supports" title="https://w3id.org/fgv#supports">supports</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/prov#wasRevisionOf" title="http://www.w3.org/ns/prov#wasRevisionOf">was revision of</a>
@@ -428,7 +422,7 @@ This section provides details for each class and property defined by FAIR Guidan
     is in domain of
    </dt>
    <dd>
-    <a href="#domain" title="https://w3id.org/fgv#domain">domain</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFocusArea" title="https://w3id.org/fgv#hasFocusArea">has focus area</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMaturityValue" title="https://w3id.org/fgv#hasMaturityValue">has maturity value</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dqv#inDimension" title="http://www.w3.org/ns/dqv#inDimension">in dimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://w3id.org/fgv#supports">supports</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#domain" title="https://w3id.org/fgv#domain">domain</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFocusArea" title="https://w3id.org/fgv#hasFocusArea">has focus area</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMaturityValue" title="https://w3id.org/fgv#hasMaturityValue">has maturity value</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dqv#inDimension" title="http://www.w3.org/ns/dqv#inDimension">in dimension</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -500,7 +494,7 @@ This section provides details for each class and property defined by FAIR Guidan
     is in range of
    </dt>
    <dd>
-    <a href="#describes" title="https://w3id.org/fgv#describes">describes</a> <sup class="type-op" title="object property">op</sup>, <a href="#resolvesTo" title="https://w3id.org/fgv#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#resolvesTo" title="https://w3id.org/fgv#resolvesTo">resolves to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -596,12 +590,6 @@ This section provides details for each class and property defined by FAIR Guidan
     <a href="#ExternalResource" title="https://w3id.org/fgv#ExternalResource">Reference / External Resource</a> <sup class="type-c" title="class">c</sup>, <a href="http://semanticscience.org/resource/SIO_000302" target="_blank" title="http://semanticscience.org/resource/SIO_000302">S I O 000302</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#describes" title="https://w3id.org/fgv#describes">describes</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
     is in range of
    </dt>
    <dd>
@@ -613,7 +601,6 @@ This section provides details for each class and property defined by FAIR Guidan
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">agent</a></li>
-  <li><a href="#describes" title="https://w3id.org/fgv#describes">describes</a></li>
   <li><a href="#domain" title="https://w3id.org/fgv#domain">domain</a></li>
   <li><a href="#hasFocusArea" title="https://w3id.org/fgv#hasFocusArea">has focus area</a></li>
   <li><a href="#hasMaturityValue" title="https://w3id.org/fgv#hasMaturityValue">has maturity value</a></li>
@@ -622,7 +609,6 @@ This section provides details for each class and property defined by FAIR Guidan
   <li><a href="#http://semanticscience.org/resource/SIO_000341" title="http://semanticscience.org/resource/SIO_000341">is manifested as</a></li>
   <li><a href="#http://www.w3.org/ns/prov#atLocation" title="http://www.w3.org/ns/prov#atLocation">location</a></li>
   <li><a href="#resolvesTo" title="https://w3id.org/fgv#resolvesTo">resolves to</a></li>
-  <li><a href="#supports" title="https://w3id.org/fgv#supports">supports</a></li>
   <li><a href="#http://www.w3.org/ns/prov#wasRevisionOf" title="http://www.w3.org/ns/prov#wasRevisionOf">was revision of</a></li>
  </ul>
  <div class="entity" id="http://www.w3.org/ns/prov#wasAttributedTo">
@@ -630,29 +616,6 @@ This section provides details for each class and property defined by FAIR Guidan
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAttributedTo</p>
   <div class="comment">
    <span class="markdown">Relates a guidance element to an agent associated with its provenance.</span>
-  </div>
- </div>
- <div class="entity" id="describes">
-  <h3>describes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/fgv#describes</p>
-  <div class="comment">
-   <span class="markdown">Relates a web page to the API or object it describes.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#WebPage" title="https://w3id.org/fgv#WebPage">Web Page</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#ObjectOrServiceAPI" title="https://w3id.org/fgv#ObjectOrServiceAPI">Object or Service / API</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
   </div>
  </div>
  <div class="entity" id="domain">
@@ -808,29 +771,6 @@ This section provides details for each class and property defined by FAIR Guidan
    </dl>
   </div>
  </div>
- <div class="entity" id="supports">
-  <h3>supports<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/fgv#supports</p>
-  <div class="comment">
-   <span class="markdown">Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion).</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#GuidanceElement" title="https://w3id.org/fgv#GuidanceElement">Guidance Element</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="http://www.w3.org/ns/prov#wasRevisionOf">
   <h3>was revision of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasRevisionOf</p>
@@ -967,8 +907,8 @@ such as a Persistent Identifier, Web Page, Annotation, or Object/Service API.
 </li>
 <li><a href="#GuidanceElement">https://w3id.org/fgv#GuidanceElement</a>
 <ul>
-<li><li><li>Added: SubClass of http://www.w3.org/ns/prov#Entity</li>
-<li><li></ul>
+<li><li>Added: SubClass of http://www.w3.org/ns/prov#Entity</li>
+<li><li><li></ul>
 </li>
 <li><a href="#ObjectOrServiceAPI">https://w3id.org/fgv#ObjectOrServiceAPI</a>
 <ul>
@@ -1017,6 +957,8 @@ such as a Persistent Identifier, Web Page, Annotation, or Object/Service API.
 </li>
 </ul></details><details><summary><u>Deleted classes</u></summary>
 <ul><li><a href="#http://semanticscience.org/resource/SIO_000614">http://semanticscience.org/resource/SIO_000614</a>
+</li>
+<li><a href="#http://www.w3.org/2000/01/rdf-schema#Resource">http://www.w3.org/2000/01/rdf-schema#Resource</a>
 </li>
 <li><a href="#https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple">https://w3id.org/fair/principles/terms/FAIR-Principle-or-SubPrinciple</a>
 </li>
@@ -1084,7 +1026,11 @@ such as a Persistent Identifier, Web Page, Annotation, or Object/Service API.
 </ul>
 </li>
 </ul></details><details><summary><u>Deleted object properties</u></summary>
-<ul><li><a href="#relatesToFAIRPrinciple">https://w3id.org/fgv#relatesToFAIRPrinciple</a>
+<ul><li><a href="#describes">https://w3id.org/fgv#describes</a>
+</li>
+<li><a href="#relatesToFAIRPrinciple">https://w3id.org/fgv#relatesToFAIRPrinciple</a>
+</li>
+<li><a href="#supports">https://w3id.org/fgv#supports</a>
 </li>
 </ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
 <details><summary><u>Deleted data properties</u></summary>

@@ -22,7 +22,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0003-1106-8441",
+        "value" : "https://orcid.org/0000-0002-7874-0362",
         "type" : "iri"
       }, {
         "identifier" : "creator",
@@ -32,7 +32,7 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "https://orcid.org/0000-0002-7874-0362",
+        "value" : "https://orcid.org/0000-0003-1106-8441",
         "type" : "iri"
       } ],
       "created" : [ {
@@ -81,13 +81,13 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "18",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "4",
@@ -96,28 +96,28 @@
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
     "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
+    "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
+    "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "23",
@@ -132,13 +132,13 @@
     "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "60",
+    "id" : "57",
     "type" : "owl:unionOf"
   }, {
-    "id" : "15",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -153,16 +153,13 @@
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "38",
+    "id" : "26",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -217,49 +214,6 @@
       "en" : "Quantifiable standards or reference points used to compare or evaluate performance, practices, or processes."
     },
     "id" : "8",
-    "superClasses" : [ "2" ]
-  }, {
-    "iri" : "https://w3id.org/fgv#GuidanceElement",
-    "baseIri" : "https://w3id.org/fgv",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://schema.org/CreativeWork",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "GuidanceElement",
-      "en" : "Guidance Element"
-    },
-    "subClasses" : [ "13", "6", "8", "14", "1", "15", "16", "17" ],
-    "comment" : {
-      "en" : "A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc."
-    },
-    "id" : "2",
-    "superClasses" : [ "3", "12" ]
-  }, {
-    "iri" : "https://w3id.org/fgv#Procedure",
-    "baseIri" : "https://w3id.org/fgv",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://schema.org/HowTo",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Procedure",
-      "en" : "Procedure"
-    },
-    "comment" : {
-      "en" : "A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process."
-    },
-    "id" : "14",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/fgv#FocusArea",
@@ -323,7 +277,50 @@
     "comment" : {
       "en" : "The aspect of a Guidance Element addressed by the guidance, such as what it concerns, why it is relevant, how it can be applied, additional information, or an expected value."
     },
-    "id" : "18"
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/fgv#GuidanceElement",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/CreativeWork",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GuidanceElement",
+      "en" : "Guidance Element"
+    },
+    "subClasses" : [ "14", "6", "8", "15", "1", "16", "17", "18" ],
+    "comment" : {
+      "en" : "A discrete item of guidance (standard, procedure, FAQ, etc.) that can be categorized by one or more Guidance Dimensions such as Domain, Motivation, Actor, etc."
+    },
+    "id" : "2",
+    "superClasses" : [ "3", "13" ]
+  }, {
+    "iri" : "https://w3id.org/fgv#Procedure",
+    "baseIri" : "https://w3id.org/fgv",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://schema.org/HowTo",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Procedure",
+      "en" : "Procedure"
+    },
+    "comment" : {
+      "en" : "A defined and ordered series of steps or tasks to be performed to achieve a specific outcome or fulfill a process."
+    },
+    "id" : "15",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/fgv#ExternalResource",
     "baseIri" : "https://w3id.org/fgv",
@@ -332,7 +329,7 @@
       "IRI-based" : "ExternalResource",
       "en" : "Reference / External Resource"
     },
-    "subClasses" : [ "23", "33", "20", "10" ],
+    "subClasses" : [ "23", "33", "20", "26" ],
     "comment" : {
       "en" : "\nA resource that represents or provides access to a piece of guidance,\nsuch as a Persistent Identifier, Web Page, Annotation, or Object/Service API.\n"
     },
@@ -358,7 +355,7 @@
     "comment" : {
       "en" : "A set of recommendations describing an approach to achieve a desired outcome, expressed as an ordered list of Instructions."
     },
-    "id" : "16",
+    "id" : "17",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/fgv#FAQ",
@@ -379,7 +376,7 @@
     "comment" : {
       "en" : "A curated list of common queries and clear, concise answers about a product, service, policy, or process."
     },
-    "id" : "13",
+    "id" : "14",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/fgv#Annotation",
@@ -403,7 +400,7 @@
     },
     "subClasses" : [ "2" ],
     "attributes" : [ "external" ],
-    "id" : "12"
+    "id" : "13"
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
@@ -412,7 +409,7 @@
       "IRI-based" : "List"
     },
     "attributes" : [ "external" ],
-    "id" : "45"
+    "id" : "42"
   }, {
     "iri" : "http://purl.org/dc/terms/LicenseDocument",
     "baseIri" : "http://purl.org/dc/terms",
@@ -431,7 +428,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "47"
+    "id" : "44"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Agent",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -440,7 +437,7 @@
       "IRI-based" : "Agent"
     },
     "attributes" : [ "external" ],
-    "id" : "49"
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/fgv#BestPractice",
     "baseIri" : "https://w3id.org/fgv",
@@ -460,7 +457,7 @@
     "comment" : {
       "en" : "Proven methods or approaches that are widely accepted as the most effective in achieving desired outcomes."
     },
-    "id" : "17",
+    "id" : "18",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "https://w3id.org/fgv#WebPage",
@@ -518,9 +515,9 @@
     "id" : "21"
   }, {
     "instances" : 0,
-    "union" : [ "23", "33", "10" ],
+    "union" : [ "23", "33", "26" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "60"
+    "id" : "57"
   }, {
     "iri" : "https://w3id.org/fgv#Framework",
     "baseIri" : "https://w3id.org/fgv",
@@ -545,7 +542,7 @@
     "comment" : {
       "en" : "A conceptual or structural foundation that organizes, aligns, and relates key components (such as goals, principles, processes, roles, and tools) within a particular domain or system of practice."
     },
-    "id" : "15",
+    "id" : "16",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Location",
@@ -555,23 +552,23 @@
       "IRI-based" : "Location"
     },
     "attributes" : [ "external" ],
-    "id" : "55"
-  }, {
-    "iri" : "http://semanticscience.org/resource/SIO_001190",
-    "baseIri" : "http://semanticscience.org/resource",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "SIO_001190"
-    },
-    "subClasses" : [ "10" ],
-    "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "52"
   }, {
     "iri" : "http://www.w3.org/ns/dqv#QualityMeasurement",
     "baseIri" : "http://www.w3.org/ns/dqv",
     "instances" : 0,
     "label" : {
       "IRI-based" : "QualityMeasurement"
+    },
+    "subClasses" : [ "10" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://semanticscience.org/resource/SIO_001190",
+    "baseIri" : "http://semanticscience.org/resource",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SIO_001190"
     },
     "subClasses" : [ "26" ],
     "attributes" : [ "external" ],
@@ -607,8 +604,8 @@
     "comment" : {
       "en" : "A quality measurement expressing the maturity level of a guidance element."
     },
-    "id" : "26",
-    "superClasses" : [ "27" ]
+    "id" : "10",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "https://w3id.org/fgv#PersistentIdentifier",
     "baseIri" : "https://w3id.org/fgv",
@@ -633,17 +630,8 @@
     "comment" : {
       "en" : "A data service or API providing machine-actionable access to guidance or data."
     },
-    "id" : "10",
-    "superClasses" : [ "4", "11" ]
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
-    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Resource"
-    },
-    "attributes" : [ "external" ],
-    "id" : "38"
+    "id" : "26",
+    "superClasses" : [ "4", "27" ]
   } ],
   "property" : [ {
     "id" : "5",
@@ -680,10 +668,13 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "37",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "39",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "40",
     "type" : "rdfs:SubClassOf"
@@ -691,98 +682,89 @@
     "id" : "41",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "42",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "43",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "44",
+    "id" : "45",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "46",
-    "type" : "rdfs:SubClassOf"
+    "id" : "47",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "48",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "50",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "51",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "52",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "53",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "54",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "55",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "56",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "57",
-    "type" : "owl:allValuesFrom"
-  }, {
     "id" : "58",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "59",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "61",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "62",
-    "type" : "owl:objectProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "63",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "64",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "65",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "66",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "67",
+    "id" : "64",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
     "range" : "11",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "9"
   }, {
     "range" : "21",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
     "range" : "27",
     "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
     "range" : "4",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "28"
   }, {
     "iri" : "http://www.w3.org/ns/dqv#inDimension",
@@ -801,50 +783,22 @@
   }, {
     "range" : "4",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
     "range" : "34",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
-    "range" : "12",
+    "range" : "13",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "35"
-  }, {
-    "iri" : "https://w3id.org/fgv#describes",
-    "baseIri" : "https://w3id.org/fgv",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "describes",
-      "en" : "describes"
-    },
-    "domain" : "23",
-    "comment" : {
-      "en" : "Relates a web page to the API or object it describes."
-    },
-    "attributes" : [ "object" ],
-    "id" : "36"
-  }, {
-    "iri" : "https://w3id.org/fgv#supports",
-    "baseIri" : "https://w3id.org/fgv",
-    "range" : "38",
-    "label" : {
-      "IRI-based" : "supports",
-      "en" : "supports"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relates a Guidance Element to any resource from the FAIR Testing Resource (FTR) vocabulary (e.g., Benchmark, Metric, Test, Criterion)."
-    },
-    "attributes" : [ "object" ],
-    "id" : "37"
   }, {
     "iri" : "https://w3id.org/fgv#hasMaturityValue",
     "baseIri" : "https://w3id.org/fgv",
-    "range" : "26",
+    "range" : "10",
     "label" : {
       "IRI-based" : "hasMaturityValue",
       "en" : "has maturity value"
@@ -854,75 +808,75 @@
       "en" : "Relates a guidance element to its maturity value."
     },
     "attributes" : [ "object" ],
-    "id" : "39"
+    "id" : "36"
   }, {
     "range" : "4",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
   }, {
     "range" : "2",
-    "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "41"
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
   }, {
     "range" : "4",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "42"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
   }, {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "43"
-  }, {
-    "range" : "2",
-    "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "44"
-  }, {
-    "range" : "2",
-    "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "46"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
   }, {
     "range" : "2",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "48"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "range" : "2",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "2",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/fgv#hasOrderedInstructions",
     "baseIri" : "https://w3id.org/fgv",
-    "range" : "45",
+    "range" : "42",
     "label" : {
       "IRI-based" : "hasOrderedInstructions",
       "en" : "has ordered instructions"
     },
-    "domain" : "14",
+    "domain" : "15",
     "comment" : {
       "en" : "A procedure may list its instructions in a defined order."
     },
     "attributes" : [ "object" ],
-    "id" : "50"
+    "id" : "47"
   }, {
     "range" : "2",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "51"
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
   }, {
     "range" : "2",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "52"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
   }, {
     "range" : "2",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "53"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
   }, {
     "iri" : "http://www.w3.org/ns/prov#atLocation",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "55",
+    "range" : "52",
     "label" : {
       "IRI-based" : "atLocation",
       "en" : "location"
@@ -932,7 +886,7 @@
       "en" : "Relates a guidance element to a location associated with its provenance."
     },
     "attributes" : [ "external", "object", "allValues" ],
-    "id" : "54"
+    "id" : "51"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -946,21 +900,7 @@
       "en" : "Relates a resource to an earlier resource of the same type that it is a revised version of."
     },
     "attributes" : [ "external", "object", "allValues" ],
-    "id" : "56"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "49",
-    "label" : {
-      "IRI-based" : "wasAttributedTo",
-      "en" : "agent"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relates a guidance element to an agent associated with its provenance."
-    },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "57"
+    "id" : "53"
   }, {
     "iri" : "http://semanticscience.org/resource/SIO_000341",
     "baseIri" : "http://semanticscience.org/resource",
@@ -974,11 +914,11 @@
       "en" : "Relates a guidance element or an abstract external resource to its manifestation as a concrete external resource (e.g., PID, WebPage, or Annotation)."
     },
     "attributes" : [ "external", "object", "allValues" ],
-    "id" : "58"
+    "id" : "54"
   }, {
     "iri" : "http://www.w3.org/ns/prov#atLocation",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "55",
+    "range" : "52",
     "label" : {
       "IRI-based" : "atLocation",
       "en" : "location"
@@ -988,16 +928,30 @@
       "en" : "Relates a guidance element to a location associated with its provenance."
     },
     "attributes" : [ "external", "object", "allValues" ],
-    "id" : "59"
+    "id" : "55"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "wasAttributedTo",
+      "en" : "agent"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relates a guidance element to an agent associated with its provenance."
+    },
+    "attributes" : [ "external", "object", "allValues" ],
+    "id" : "56"
   }, {
     "range" : "3",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "61"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
   }, {
     "iri" : "https://w3id.org/fgv#resolvesTo",
     "baseIri" : "https://w3id.org/fgv",
-    "range" : "60",
+    "range" : "57",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -1015,16 +969,16 @@
       "en" : "Indicates the resource a persistent identifier or annotation resolves to (e.g., a web page, annotation, or API)."
     },
     "attributes" : [ "functional", "object" ],
-    "id" : "62"
+    "id" : "59"
   }, {
     "range" : "3",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "63"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasAttributedTo",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "49",
+    "range" : "46",
     "label" : {
       "IRI-based" : "wasAttributedTo",
       "en" : "agent"
@@ -1034,7 +988,7 @@
       "en" : "Relates a guidance element to an agent associated with its provenance."
     },
     "attributes" : [ "external", "object", "allValues" ],
-    "id" : "64"
+    "id" : "61"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasRevisionOf",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -1048,11 +1002,11 @@
       "en" : "Relates a resource to an earlier resource of the same type that it is a revised version of."
     },
     "attributes" : [ "external", "object", "allValues" ],
-    "id" : "65"
+    "id" : "62"
   }, {
     "iri" : "https://w3id.org/fgv#hasFocusArea",
     "baseIri" : "https://w3id.org/fgv",
-    "range" : "18",
+    "range" : "12",
     "label" : {
       "IRI-based" : "hasFocusArea",
       "en" : "has focus area"
@@ -1062,7 +1016,7 @@
       "en" : "Relates a guidance element to a focus area addressed by the guidance."
     },
     "attributes" : [ "object" ],
-    "id" : "66"
+    "id" : "63"
   }, {
     "iri" : "https://w3id.org/fgv#domain",
     "baseIri" : "https://w3id.org/fgv",
@@ -1076,6 +1030,6 @@
       "en" : "Field of science and technology classification (FOS) for this guidance element."
     },
     "attributes" : [ "object" ],
-    "id" : "67"
+    "id" : "64"
   } ]
 }
